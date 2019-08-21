@@ -1,0 +1,78 @@
+@font-face{
+	font-family: "Gotham-Bold";
+	src: url('../fuentes/gotham/GothamBold.ttf');	
+}
+
+body, html{
+	margin: 0px;
+	padding: 0px;
+        
+	background: url("../Imagenes/background.png") center no-repeat fixed;
+}
+
+#contenedorPrincipal{
+	width: 100%;
+	height: 600px;;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;
+	
+	font-family:"Gotham-Bold";
+	font-size: 1.1em;
+}
+
+.itemPrincipalInformacion{
+	grid-column: 1;
+	margin: 0px;
+	padding:0px;
+	display: flex;
+	align-items: center;
+}
+
+.itemPrincipalInformacion:nth-child(1){
+	justify-content: flex-end;
+	margin-right: 5%;
+}
+
+.itemPrincipalInformacion:nth-child(2){
+	justify-content: flex-end;
+	margin-right: 5%;
+}
+
+.itemPrincipalAccion{
+	grid-column: 2;
+	margin: 0px;
+	padding:0px;
+	display: flex;
+	align-items: center;
+}
+
+.itemPrincipalAccion:nth-child(1){
+	justify-content: flex-start;
+	margin-right: 5%;
+}
+
+.itemPrincipalAccion:nth-child(2){
+	justify-content:flex-start;
+	margin-left: 5%;
+}
+
+.estiloItem{
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: #16254C;
+	width: 180px;
+	height: 180px;
+}
+
+.itemSecundario{
+	display: none;
+}
+
+img{
+	width: 135px;
+	height: 135px;;
+}

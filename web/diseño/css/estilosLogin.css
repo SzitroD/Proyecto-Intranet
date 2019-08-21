@@ -1,0 +1,109 @@
+@font-face{
+	font-family: "Gotham-Bold";
+	src: url('../fuentes/gotham/GothamBold.ttf');	
+}
+
+body, html {
+	margin:0px;
+	padding:0px;
+        
+	background: url("../Imagenes/background.png") center no-repeat fixed;
+}
+
+#background{
+	display:grid;
+	height:650px;
+	grid-template-columns:50% 50%;
+	grid-template-rows:1 fr 1 fr;
+	
+	font-family:"Gotham-Bold";
+	font-size: 1.1em;
+}
+
+#contenedorLogo{
+	margin:0px;
+	padding:0px;
+	grid-column:1;
+	grid-row:1;
+	display:flex;
+	justify-content:flex-end;
+	align-items:flex-end;
+}
+
+img{
+	width:60%;
+	height:110px;	
+}
+
+#contenedorBoton{
+	grid-column:1;
+	grid-row:2;
+	display:flex;
+	justify-content:flex-end;
+	
+}
+
+#botonConocenos{
+	width:150px;
+	height:30px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-decoration:none;
+	border:solid 2px #545973;
+	margin-right:10%;
+	margin-top: 5%;
+	color: #545973;
+}
+
+#seccionFormulario{
+	grid-column:2;
+	grid-row:1/3;
+	display:flex;
+	justify-content:flex-start;
+	align-items:center;
+	margin-left:10%;
+}
+
+#contenedorFormulario{
+	width:50%;
+	height:50%;
+	display:flex;
+	flex-direction:column;
+	border: solid 2px #16254C;
+}
+
+h3{
+	margin:0px;
+	padding:0px;
+	color:#F0F0F0;
+	background:#16254C;
+	height:20%;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+#formulario{
+	width:100%;
+	height:80%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+input{
+	margin: 15px;
+	width:70%;
+	height:15%;
+	border: solid 2px #16254C;
+}
+
+#botonEnviar{
+	color:#FFFFFF;
+	background: #16254C;
+	font-family: "Gotham-Bold";
+	font-size: 1em;
+}

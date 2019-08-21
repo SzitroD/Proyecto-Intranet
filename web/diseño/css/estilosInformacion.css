@@ -1,0 +1,86 @@
+@font-face{
+	font-family: "Gotham-Bold";
+	src: url('../fuentes/gotham/GothamBold.ttf');	
+}
+
+body, html{
+	margin: 0px;
+	padding: 0px;
+        
+	background: url("../Imagenes/background.png") center no-repeat fixed;
+}
+
+#contenedorPrincipal{
+	width: 100%;
+	height: 650px;;
+	display: grid;
+	grid-template-columns: 1fr 17% 17% 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	
+	font-family:"Gotham-Bold";
+	font-size: 1em;
+}
+
+.itemPrincipal{
+	margin: 0px;
+	padding:0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.itemPrincipal:nth-child(1){
+	grid-row: 2;
+	grid-column: 1;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.itemPrincipal:nth-child(2){
+	grid-row: 1;
+	grid-column: 2;
+	justify-content: flex-end;
+	align-self: flex-end;
+}
+
+.itemPrincipal:nth-child(3){
+	grid-row: 3;
+	grid-column: 2;
+	align-self: flex-start;
+	justify-content: flex-end;
+}
+
+.itemPrincipal:nth-child(4){
+	grid-row: 2;
+	grid-column: 3;
+}
+
+.itemPrincipal:nth-child(5){
+	grid-row: 1;
+	grid-column: 4;
+	justify-content: flex-start;
+	align-self: flex-end;
+}
+
+.itemPrincipal:nth-child(6){
+	grid-row: 3;
+	grid-column: 4;
+	justify-content: flex-start;
+	align-self: flex-start;
+}
+
+.estiloItem{
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	color: #16254C;
+	width: 150px;
+	height: 150px;;
+}
+
+img{
+	width: 115px;
+	height: 115px;;
+}

@@ -1,0 +1,31 @@
+@font-face{
+	font-family: "Gotham-Bold";
+	src: url('../fuentes/gotham/GothamBold.ttf');	
+}
+
+body,html{
+	margin: 0px;
+ 	padding: 0px;
+}
+
+#seccionMensaje{
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	z-index: 15;
+	right: 0px;
+	bottom: 0px;
+	
+}
+
+#mensaje{
+	width: 150px;
+	height: 40px;;
+	background: #16254C;
+	font-family: "Gotham-Bold";
+	font-size:.9em;
+	color: #f0f0f0;
+	margin: 0px;
+	padding: 0px;
+}
+
