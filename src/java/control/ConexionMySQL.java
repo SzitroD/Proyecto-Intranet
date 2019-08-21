@@ -8,8 +8,8 @@ public class ConexionMySQL {
     public Connection conectar(){
         String host="localhost:3306", usuario="root";
         // String host="192.168.1.73:3306", usuario="dev";
-        String contrasena="sistemas";
-        String sid="prueba";
+        String contrasena="stmsc0nt";
+        String sid="intranet";
         
         String cadenaconexion;
         cadenaconexion="jdbc:mysql://" + host +"/"+ sid;

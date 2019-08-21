@@ -4,37 +4,26 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import modelo.Usuario;
 
 public class Consultas {
 
-    public ArrayList<Usuario> validarUsuario(String usuario) {
-        ArrayList<Usuario> Lista = new ArrayList<>();
-        ResultSet rs = null;
+    public Boolean validarUsuario(String usuario, String contraseña) {
+        Boolean status = false;
+        Connection con = new ConexionMySQL().conectar();
         PreparedStatement ps = null;
-        Connection con;
-        ConexionMySQL coneccion = new ConexionMySQL();
-        con = coneccion.conectar();
+        ResultSet rs = null;
         if (con != null) {
-            String sql = "SELECT "
-                        + "     id_usuario,"
-            		+ "	nombre_usuario, "
-            		+ "	contraseña "
-                        + "FROM "
-            		+ "	usuarios"
-            		+ "where "
-            		+ "	nombre_usuario = '" + usuario + "' ";
+            String sql = "SELECT idUsuario AS ID, usuario AS USU, contraseña AS PASS \n" +
+                "FROM intranet.usuarios \n" +
+                "WHERE usuario = ? AND contraseña = ? ";
             try {
                 ps = con.prepareStatement(sql);
+                ps.setString(1, usuario);
+                ps.setString(2, contraseña);
+                // System.out.println("Query: \n" + ps.toString());
                 rs = ps.executeQuery();
-                while (rs.next()) {
-                    Usuario objUsuario = new Usuario();
-                    objUsuario.setId_Usuario(rs.getInt("id_usuario"));
-                    objUsuario.setNombre_Usuario(rs.getString("nombre_usuario"));
-                    objUsuario.setContraseña(rs.getString("contrasena"));
-                    Lista.add(objUsuario);
-                    objUsuario = null;
+                if (rs.next()) {
+                    status = true;
                 }
             } catch (SQLException e) {
                 System.out.println("ERROR validarUsuario: " + e.getSQLState() + ": " + e.getMessage());
@@ -50,13 +39,12 @@ public class Consultas {
                     rs = null;
                     con.close();
                 } catch (SQLException ee) {
-                    System.out.println("SQL ERROR-2 " + ee.getSQLState() + ee.getMessage());
+                    System.out.println("ERROR SQL: " + ee.getSQLState() + ee.getMessage());
                 }
             }
         } else {
-            System.out.println("CONECCION FAIL");
-            return Lista;
+            System.out.println("ERROR SQL: Conexión nula");
         }
-        return Lista;
+        return status;
     }
 }
