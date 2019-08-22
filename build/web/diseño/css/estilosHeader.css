@@ -1,59 +1,61 @@
 @font-face{
-	font-family: "Gotham-Bold";
-	src: url('../fuentes/gotham/GothamBold.ttf');	
+    font-family: "Gotham-Bold";
+    src: url('../fuentes/gotham/GothamBold.ttf');	
 }
 
 body, html{
-	margin:0px;
-	padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 header{
-	margin:0px;
-	padding:0px;
-	width:100%;
-	height:90px;
-	display:grid;
-	grid-template-columns:50% 50%;
-	grid-template-rows:100%;
-	background:#16254C;
-	font-family:"Gotham-Bold";
-	font-size:1em; 
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    background: #16254C;
+    font-family: "Gotham-Bold";
+    font-size: 1em;
+    position: fixed;
+    top: 0px;
 }
 
 #contenedorLogo{
-	grid-column:1;
-	display:flex;
-	justify-content:flex-start;
-	margin:0px;
-	padding:0px;
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+    padding-top: 5px;
 }
 
 #logo{
-	width:100%;
-	height:100%;
+    height: 45px;
 }
 
-#contenedorMenu{
-	grid-column:2;
-	display:flex;
-	justify-content:flex-end;
+#contenedorMenu {
+    grid-column:2;
+    display:flex;
+    justify-content: flex-end;
 }
 
 #listaItems{
-	margin:0px;
-	padding:0px;
-	width:100%;
-	height:100%;
-	display:flex;
-	justify-content:space-around;
-	align-items:center;
-	list-style:none;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-content: flex-end;
+    align-items:center;
+    list-style:none;
 }
 
 .itemMenu{
-	padding:10px 0px;
-	margin:0px;
+    padding:10px 0px;
+    margin:0px;
 }
 
 .itemMenu:hover{

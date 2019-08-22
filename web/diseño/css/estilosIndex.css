@@ -1,121 +1,124 @@
 @font-face{
-	font-family: "Gotham-Bold";
-	src: url('../fuentes/gotham/GothamBold.ttf');
-	font-family: "Gotham";
-	src: url('../fuentes/gotham/GothamMedium.ttf');	
+    font-family: "Gotham-Bold";
+    src: url('../fuentes/gotham/GothamBold.ttf');
+    font-family: "Gotham";
+    src: url('../fuentes/gotham/GothamMedium.ttf');
 }
 
 html, body{
-	margin:0px;
-	padding:0px;
-	background: url("../Imagenes/background.png") center no-repeat fixed;
+    margin:0px;
+    padding:0px;
+    background: url("../Imagenes/background.png") center no-repeat fixed;
+    background-size: cover;
 }
 
 #vistaPrincipal{
-	width:100%;
-	height: 650px;
-	display:flex;
-	justify-content: center;
-	align-items: center;
+    width:100%;
+    height: 650px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenidoPrincipal{
-	width: 65%;
-	height: 60%;
-	border: 1px solid black;
+    width: 65%;
+    height: 60%;
+    border: 1px solid black;
 }
 
 .contenedorImagenPrincipal{
-	width: 100%;
-	height: 100%;;
-	grid-column: 2;
-	margin:0px;
-	padding: 0px;
+    width: 100%;
+    height: 100%;;
+    grid-column: 2;
+    margin:0px;
+    padding: 0px;
 }
 
 .imagenPrincipal{
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding:0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding:0px;
 }
 #seccionTitulo{
-	color: white;
-	grid-column: 1; 
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	background:#16254C;
+    color: white;
+    grid-column: 1; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:#16254C;
 }
 
 .tituloSeccion{
 	
-	font-family: "Gotham-Bold";
-	font-size: 2em;
+    font-family: "Gotham-Bold";
+    font-size: 2em;
 }
 #titulo{
-	margin: 10%;
+    margin: 10%;
 }
 
 p{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: "Gotham";
-	font-size: .9em;
-	margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gotham";
+    font-size: .9em;
+    margin: 10%;
 }
 
 .boton{
-	position: absolute;
+    position: absolute;
+    background-color: transparent; 
 }
 
 #contenido{
-	display: grid;
-	grid-template-columns: 35% 1fr;
-	
-	display: none;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    display: none;
 }
 
 #contenidoSecundario{
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #video{
-	width: 100%;
-	height: 90%;
-	margin: 0px;
-	padding: 0px;
+    width: 100%;
+    height: 90%;
+    margin: 0px;
+    padding: 0px;
 }
 
 #mensajeVideo{
-	width: 100%;
-	height: 10%;
-	background: #16254C;
+    width: 100%;
+    height: 10%;
+    background: #16254C;
 }
 
 #tituloVideo{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0px;
-	margin:0px;
-	color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin:0px;
+    color: #f0f0f0;
 }
 
 .boton:nth-child(1){
-	left:15%;
-	transform: rotate(180deg);
+    left:15%;
+    transform: rotate(180deg);
 }
+
 .boton:nth-child(2){
-	right:15%;
+    right:15%;
 }
+
 .boton:nth-child(3){
-	align-self: flex-end;
-	left: 18%;
-	margin-top: -5%;
+    align-self: flex-end;
+    left: 18%;
+    margin-top: -5%;
 }

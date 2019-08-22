@@ -1,27 +1,29 @@
 @font-face{
-	font-family: "Gotham-Bold";
-	src: url('../fuentes/gotham/GothamBold.ttf');	
+    font-family: "Gotham";
+    src: url('../fuentes/gotham/GothamMedium.ttf');
 }
 
 body, html{
-	margin:0px;
-	padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 footer{
-	margin:0px;
-	padding:0px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	width:100%;
-	height:50px;
-	background: #16254C;
-	
-	font-family:"Gotham-Bold";
-	font-size: 1.2em;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background: #16254C;
+    position: fixed;
+    font-family: "Gotham";
+    font-size: 1.2em;
+    right: 0px;
+    bottom: 0px;
 }
 
 small{
-	color: #f0f0f0;
+    color: #f0f0f0;
 }
